@@ -66,3 +66,5 @@ retract v3.9.0+incompatible
 retract v0.0.1
 
 replace k8s.io/kube-openapi => github.com/openshift/kube-openapi v0.0.0-20231129121756-d75900c67297
+
+replace github.com/openshift/api => github.com/jan--f/api v0.0.0-20240320062259-d8590daea6e5
