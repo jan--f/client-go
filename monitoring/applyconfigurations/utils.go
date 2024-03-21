@@ -49,6 +49,22 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 		return &monitoringv1alpha1.AlertRelabelConfigSpecApplyConfiguration{}
 	case v1alpha1.SchemeGroupVersion.WithKind("AlertRelabelConfigStatus"):
 		return &monitoringv1alpha1.AlertRelabelConfigStatusApplyConfiguration{}
+	case v1alpha1.SchemeGroupVersion.WithKind("DataSink"):
+		return &monitoringv1alpha1.DataSinkApplyConfiguration{}
+	case v1alpha1.SchemeGroupVersion.WithKind("DataSource"):
+		return &monitoringv1alpha1.DataSourceApplyConfiguration{}
+	case v1alpha1.SchemeGroupVersion.WithKind("DataTransformation"):
+		return &monitoringv1alpha1.DataTransformationApplyConfiguration{}
+	case v1alpha1.SchemeGroupVersion.WithKind("ObservabilityDataExport"):
+		return &monitoringv1alpha1.ObservabilityDataExportApplyConfiguration{}
+	case v1alpha1.SchemeGroupVersion.WithKind("ObservabilityDataExportSpec"):
+		return &monitoringv1alpha1.ObservabilityDataExportSpecApplyConfiguration{}
+	case v1alpha1.SchemeGroupVersion.WithKind("ObservabilityDataExportStatus"):
+		return &monitoringv1alpha1.ObservabilityDataExportStatusApplyConfiguration{}
+	case v1alpha1.SchemeGroupVersion.WithKind("PrometheusFederateSpec"):
+		return &monitoringv1alpha1.PrometheusFederateSpecApplyConfiguration{}
+	case v1alpha1.SchemeGroupVersion.WithKind("PrometheusRemoteWriteSpec"):
+		return &monitoringv1alpha1.PrometheusRemoteWriteSpecApplyConfiguration{}
 	case v1alpha1.SchemeGroupVersion.WithKind("PrometheusRuleRef"):
 		return &monitoringv1alpha1.PrometheusRuleRefApplyConfiguration{}
 	case v1alpha1.SchemeGroupVersion.WithKind("RelabelConfig"):

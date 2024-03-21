@@ -17,3 +17,11 @@ type AlertingRuleListerExpansion interface{}
 // AlertingRuleNamespaceListerExpansion allows custom methods to be added to
 // AlertingRuleNamespaceLister.
 type AlertingRuleNamespaceListerExpansion interface{}
+
+// ObservabilityDataExportListerExpansion allows custom methods to be added to
+// ObservabilityDataExportLister.
+type ObservabilityDataExportListerExpansion interface{}
+
+// ObservabilityDataExportNamespaceListerExpansion allows custom methods to be added to
+// ObservabilityDataExportNamespaceLister.
+type ObservabilityDataExportNamespaceListerExpansion interface{}

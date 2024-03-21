@@ -12,6 +12,8 @@ type Interface interface {
 	AlertRelabelConfigs() AlertRelabelConfigInformer
 	// AlertingRules returns a AlertingRuleInformer.
 	AlertingRules() AlertingRuleInformer
+	// ObservabilityDataExports returns a ObservabilityDataExportInformer.
+	ObservabilityDataExports() ObservabilityDataExportInformer
 }
 
 type version struct {
@@ -33,4 +35,9 @@ func (v *version) AlertRelabelConfigs() AlertRelabelConfigInformer {
 // AlertingRules returns a AlertingRuleInformer.
 func (v *version) AlertingRules() AlertingRuleInformer {
 	return &alertingRuleInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// ObservabilityDataExports returns a ObservabilityDataExportInformer.
+func (v *version) ObservabilityDataExports() ObservabilityDataExportInformer {
+	return &observabilityDataExportInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }

@@ -229,6 +229,12 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 		return &operatorv1.MachineConfigurationSpecApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("MachineConfigurationStatus"):
 		return &operatorv1.MachineConfigurationStatusApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("MachineManager"):
+		return &operatorv1.MachineManagerApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("MachineManagerSelector"):
+		return &operatorv1.MachineManagerSelectorApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("ManagedBootImages"):
+		return &operatorv1.ManagedBootImagesApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("MTUMigration"):
 		return &operatorv1.MTUMigrationApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("MTUMigrationValues"):
@@ -273,6 +279,8 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 		return &operatorv1.OperatorStatusApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("OVNKubernetesConfig"):
 		return &operatorv1.OVNKubernetesConfigApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("PartialSelector"):
+		return &operatorv1.PartialSelectorApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("Perspective"):
 		return &operatorv1.PerspectiveApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("PerspectiveVisibility"):

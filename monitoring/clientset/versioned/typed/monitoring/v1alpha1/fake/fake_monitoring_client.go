@@ -20,6 +20,10 @@ func (c *FakeMonitoringV1alpha1) AlertingRules(namespace string) v1alpha1.Alerti
 	return &FakeAlertingRules{c, namespace}
 }
 
+func (c *FakeMonitoringV1alpha1) ObservabilityDataExports(namespace string) v1alpha1.ObservabilityDataExportInterface {
+	return &FakeObservabilityDataExports{c, namespace}
+}
+
 // RESTClient returns a RESTClient that is used to communicate
 // with API server by this client implementation.
 func (c *FakeMonitoringV1alpha1) RESTClient() rest.Interface {

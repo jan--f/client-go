@@ -48,6 +48,8 @@ func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Monitoring().V1alpha1().AlertRelabelConfigs().Informer()}, nil
 	case v1alpha1.SchemeGroupVersion.WithResource("alertingrules"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Monitoring().V1alpha1().AlertingRules().Informer()}, nil
+	case v1alpha1.SchemeGroupVersion.WithResource("observabilitydataexports"):
+		return &genericInformer{resource: resource.GroupResource(), informer: f.Monitoring().V1alpha1().ObservabilityDataExports().Informer()}, nil
 
 	}
 
